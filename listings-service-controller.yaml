@@ -1,0 +1,31 @@
+---
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: listings-service
+  labels:
+    app: listings-service
+spec:
+  replicas: 3
+  selector:
+    app: listings-service
+  template:
+    metadata:
+      labels:
+        app: listings-service
+    spec:
+      containers:
+        - name: listings-service
+          image: docker.io/markfranklin/listings-service:latest
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: <YOUR ID>
+            - name: AWS_SECRET_ACCESS_KEY
+              value: <YOUR KEY>
+            - name: AWS_REGION
+              value: <YOUR REGION>
+            - name: BUCKET_NAME
+              value: <YOUR BUCKET NAME>
+          ports:
+            - name: api
+              containerPort: 8080

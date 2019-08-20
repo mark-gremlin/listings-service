@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: listings-service
+  labels:
+    app: listings-service
+spec:
+  ports:
+    - port: 8080
+      targetPort: api
+  selector:
+    app: listings-service
+  type: LoadBalancer
