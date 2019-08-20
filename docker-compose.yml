@@ -1,0 +1,11 @@
+version: '3'
+services:
+  listings-service:
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_REGION
+      - BUCKET_NAME
+    build: .
+    ports:
+      - "8080:8080"
