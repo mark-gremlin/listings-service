@@ -1,0 +1,26 @@
+POST http://localhost:8080/post
+Content-Type: application/json
+
+{
+  "beds": 2,
+  "baths": 1,
+  "sqft": 1000,
+  "rent": 1600,
+  "deposit": 500,
+  "fees": 100,
+  "address": "11642 91st Ln NE APT E, Kirkland, WA 98034",
+  "description": "Gorgeous apartment with open floor plan in-unit laundry deck. Features A/C stainless appliances hardwood floors stunning counter tops and cabinets abundant closet space and great finishes all around. Apartment complex has community patio area with BBQ and covered parking. Walk 1 block to Juanita Beach. The location does not get any better than this! $300 non refundable pet fee (per pet) Security deposit due at signing (and any pet fee) Tenant responsible for electricity 100$ for utilities such as water garbage and sewer",
+  "dateAvailable": "01-09-2019",
+  "amenities": {
+    "cooling": true,
+    "heating": true,
+    "laundryInUnit": true,
+    "pets": ["dogs", "cats", "birds", "fish"]
+  },
+  "posted": "19-08-2019"
+
+
+
+}
+
+###
