@@ -18,7 +18,7 @@ Set the following environment variables...
 | Key      | Value |
 | ----------- | ----------- |
 | AWS_ACCESS_KEY_ID      | "access key id value" |
-| AWS_SECRET_ACCESS_KEY   | "access key value>" |
+| AWS_SECRET_ACCESS_KEY   | "access key value" |
 | AWS_REGION | "region" |
 | BUCKET_NAME | "bucket name" |
 
@@ -34,7 +34,8 @@ Set the following environment variables...
 
 Note: This assumes you have the awscli and kubectl installed and properly configured
 
-1. Create the cluster
+1. Update the credentials and bucket placeholders in listings-service-controller.yaml with your specific values
+2. Create the cluster
 eksctl create cluster \
     > --name some-name \
     > --version 1.13 \
@@ -44,8 +45,8 @@ eksctl create cluster \
     > --nodes-min 1 \
     > --nodes-max 4 \
     > --node-ami auto 
-2. Create the ReplicaSet and Pods: `kubectl create -f listings-service-controller.yaml`
-3. Create the service: `kubectl create -f listings-service.yaml`
+3. Create the ReplicaSet and Pods: `kubectl create -f listings-service-controller.yaml`
+4. Create the service: `kubectl create -f listings-service.yaml`
 
 # Testing
 
