@@ -37,7 +37,7 @@ Note: This assumes you have the awscli and kubectl installed and properly config
 1. Update the credentials and bucket placeholders in listings-service-controller.yaml with your specific values
 2. Create the cluster
     
-    eksctl create cluster \
+    > eksctl create cluster \
     > --name some-name \
     > --version 1.13 \
     > --nodegroup-name listings-service \
