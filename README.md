@@ -36,7 +36,8 @@ Note: This assumes you have the awscli and kubectl installed and properly config
 
 1. Update the credentials and bucket placeholders in listings-service-controller.yaml with your specific values
 2. Create the cluster
-eksctl create cluster \
+    
+    eksctl create cluster \
     > --name some-name \
     > --version 1.13 \
     > --nodegroup-name listings-service \
@@ -44,7 +45,7 @@ eksctl create cluster \
     > --nodes 3 \
     > --nodes-min 1 \
     > --nodes-max 4 \
-    > --node-ami auto 
+    > --node-ami auto
 3. Create the ReplicaSet and Pods: `kubectl create -f listings-service-controller.yaml`
 4. Create the service: `kubectl create -f listings-service.yaml`
 
