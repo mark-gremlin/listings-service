@@ -28,7 +28,7 @@ Set the following environment variables...
 
 # Launching listings-service (docker compose)
 
-* `docker-compose up`
+* `./mvnw package && docker-compose up`
 
 # Launching listings-service (EKS)
 

@@ -159,7 +159,7 @@ public class XferMgrProgress {
         System.out.println("directory: " + dir_path + (recursive ?
                 " (recursive)" : "") + (pause ? " (pause)" : ""));
 
-        TransferManager xfer_mgr = new TransferManager();
+        TransferManager xfer_mgr = TransferManagerBuilder.defaultTransferManager();
         try {
             MultipleFileUpload multi_upload = xfer_mgr.uploadDirectory(
                     bucket_name, key_prefix, new File(dir_path), recursive);
