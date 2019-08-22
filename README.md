@@ -46,8 +46,8 @@ Note: This assumes you have the awscli and kubectl installed and properly config
     > --nodes-min 1 \
     > --nodes-max 4 \
     > --node-ami auto
-3. Create the ReplicaSet and Pods: `kubectl create -f listings-service-controller.yaml`
-4. Create the service: `kubectl create -f listings-service.yaml`
+3. Create the Deployment: `kubectl create -f listings-deployment.yaml`
+4. Create the Service: `kubectl create -f listings-service.yaml`
 
 # Testing
 
