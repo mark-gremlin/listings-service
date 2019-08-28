@@ -1,18 +1,18 @@
 ---
-kind: Deployment
+kind: ReplicationController
 apiVersion: v1
 metadata:
-  name: listings-service
+  name: listings-deployment
   labels:
-    app: listings-service
+    app: listings
 spec:
   replicas: 3
   selector:
-    app: listings-service
+    app: listings
   template:
     metadata:
       labels:
-        app: listings-service
+        app: listings
     spec:
       containers:
         - name: listings-service
@@ -27,5 +27,5 @@ spec:
             - name: BUCKET_NAME
               value: <YOUR BUCKET NAME>
           ports:
-            - name: api
+            - name: listings
               containerPort: 8080

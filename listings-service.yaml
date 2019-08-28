@@ -4,11 +4,11 @@ apiVersion: v1
 metadata:
   name: listings-service
   labels:
-    app: listings-service
+    app: listings
 spec:
   ports:
     - port: 8080
       targetPort: api
   selector:
-    app: listings-service
+    app: listings
   type: LoadBalancer
